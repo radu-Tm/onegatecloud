@@ -1,6 +1,7 @@
 function toggleMenu() {
     const navbar = document.querySelector('nav ul');
     navbar.classList.toggle('active');
+	document.getElementById("menu-icon").style.display = "none";
 }
 
 function changeContent(section) {
@@ -13,13 +14,14 @@ function changeContent(section) {
         contact: 'Contact Us content displayed here.'
     };
 
-    // Actualizează conținutul
+    // Actualizeaza
     document.getElementById("main-content").innerHTML = `<section id="${section}">
         <h2>${section.charAt(0).toUpperCase() + section.slice(1)}</h2>
         <p>${content[section]}</p>
     </section>`;
-
-    // Închide meniul după ce se face selecția
+	document.getElementById("menu-icon").style.display = "block";
+   
     const navbar = document.querySelector('nav ul');
     navbar.classList.remove('active');
+	
 }
