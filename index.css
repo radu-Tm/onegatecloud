@@ -1,44 +1,124 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
+}
+
+header {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header {
-    background: #1e90ff;
-    color: white;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 230px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+main {
+    margin-top: 140px;
     padding: 20px;
-    text-align: center;
 }
 
-.logo img {
-    max-width: 100px;
+section {
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+section h2 {
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
-.content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
-.content h2 {
-    color: #333;
-    margin: 20px 0;
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo-container {
+        scale:0.6;
+    }
 }
 
-.footer {
-    background: #333;
-    color: white;
+footer {
+	width:100%;
+	position:fixed;
+	bottom:0;
     text-align: center;
     padding: 10px;
-}
+    background-color: #333;
+    color: white;
+    }

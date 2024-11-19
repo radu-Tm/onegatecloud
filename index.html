@@ -1,35 +1,51 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneGateCloud</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OneGateCloud - the Gatekeeper</title>
+		<link rel="canonical" href="https://onegatecloud.com">
+        <link rel="stylesheet" href="index.css">            
+		<meta name="description" content="AWS cloud consulting services. Security, Migration, Development, Optimization">
+        <meta property="og:type" content="website">
+    <meta property="og:title" content="OneGateCloud - the Gatekeeper">
+    <meta property="og:url" content="https://onegatecloud.com">
+    <meta property="og:image" content="https://onegatecloud.com/ogc.png">
+    <meta property="og:description" content="AWS cloud consulting services. Security, Migration, Development, Optimization">
 </head>
-<body>
-    <header class="header">
-        <div class="logo">
-            <img src="ogc.png" alt="OneGateCloud Logo">
+  <body>
+
+    <header>
+        <div class="logo-container">
+            <img src="ogc.png" alt="OneGateCloud Logo" class="logo">
         </div>
-        <h1>Welcome to OneGateCloud</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#about" onclick="changeContent('about')">About Us</a></li>
+                <li><a href="#portfolio" onclick="changeContent('portfolio')">Project Portfolio</a></li>
+                <li><a href="#testimonials" onclick="changeContent('testimonials')">Testimonials</a></li>
+                <li><a href="#insights" onclick="changeContent('insights')">Insights</a></li>
+                <li><a href="#pricing" onclick="changeContent('pricing')">Pricing</a></li>
+                <li><a href="#contact" onclick="changeContent('contact')">Contact Us</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
     </header>
-    <main class="content">
-        <section>
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo nec nulla tincidunt, non tincidunt ligula mollis.</p>
-        </section>
-        <section>
-            <h2>Services</h2>
-            <p>Curabitur facilisis velit vel diam fringilla, ac tincidunt eros tristique. Vivamus id augue at nulla elementum fermentum.</p>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <p>Email us at: <a href="mailto:info@onegatecloud.com">info@onegatecloud.com</a></p>
+
+    <main id="main-content">
+        <section id="home">
+            <h2>Bla-bla dar în Engleză</h2>
+            <p>Content will change ..click the menu!
+			<br><small>If it doesn't work try with both hands!</small></p>
         </section>
     </main>
-    <footer class="footer">
-        <p>&copy; 2024 OneGateCloud. All rights reserved.</p>
+
+    <footer>
+        <p>© 2024 OneGateCloud. All rights reserved.</p>
     </footer>
+
+    <script async src= "script.js"></script>
+
 </body>
 </html>
