@@ -41,7 +41,7 @@ async function sendEmail(event) {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    const response = await fetch('https://zja72hqpac.execute-api.us-east-1.amazonaws.com/sedmaildev', {
+    const response = await fetch('https://zja72hqpac.execute-api.us-east-1.amazonaws.com/sedmaildev/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message }),
